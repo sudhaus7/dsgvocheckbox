@@ -12,7 +12,7 @@ use Nimut\TestingFramework\TestCase\UnitTestCase;
 use SUDHAUS7\Sudhaus7Formframework\ViewHelpers\SimplelinkViewHelper;
 
 
-class SimplelinkViewHelperTest extends UnitTestCase
+class SimplelinkViewHelperTest extends \Nimut\TestingFramework\TestCase\ViewHelperBaseTestcase
 {
     
     protected $mockedContentObjectRenderer;
@@ -25,7 +25,7 @@ class SimplelinkViewHelperTest extends UnitTestCase
     public function setUp()
     {
         
-        $this->mockedViewHelper = $this->getAccessibleMock(SimplelinkViewHelper::class,['init','renderChildren']);
+        $this->mockedViewHelper = $this->getAccessibleMock(SimplelinkViewHelper::class,['renderChildren']);
         $this->mockedContentObjectRenderer = $this->getAccessibleMock(\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer::class, [ 'typoLink']);
         
     }
@@ -37,9 +37,11 @@ class SimplelinkViewHelperTest extends UnitTestCase
     {
         $url = 123;
         $result = ['parameter'=>$url];
-        //$this->mockedContentObjectRenderer->expects($this->once())->method('typoLink_URL')->with($result);
-        $this->mockedViewHelper->_set($url);
-        $this->mockedViewHelper->_set($url);
-        $result = $this->mockedViewHelper()->render();
+        $x = $this->mockedContentObjectRenderer->expects($this->once())->method('typoLink')->with($result,'Text');
+        //$this->mockedViewHelper->_set($url);
+        $this->mockedViewHelper->_set('link',$url);
+        $this->mockedViewHelper->_set('content',$this->testtext);
+        $result = $this->mockedViewHelper->render();
+        self::assertEquals('x', $result);
     }
 }

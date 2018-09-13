@@ -19,6 +19,7 @@ class SimplelinkViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
     public function initializeArguments()
     {
         $this->registerArgument('link', 'string', 'link configuration', true);
+        $this->registerArgument('content', 'string', 'the child content', false);
     }
     
     /**
@@ -31,8 +32,12 @@ class SimplelinkViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
      */
     public function render()
     {
-        $output = $this->renderChildren();
+        
         $link = $this->arguments['link'];
+        $output = $this->arguments['content'];
+        if (empty($content)) {
+            $output = $this->renderChildren();
+        }
         preg_match('/\[.+\]/', $output, $matches);
         foreach ($matches as $match) {
             $plain = trim($match, '[]');
