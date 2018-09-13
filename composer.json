@@ -43,12 +43,12 @@
   },
   "autoload": {
     "psr-4": {
-      "SUDHAUS7\\Sudhaus7Base\\": "Classes/"
+      "SUDHAUS7\\Sudhaus7Formframework\\": "Classes/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "SUDHAUS7\\Sudhaus7Base\\Tests\\": "Tests/"
+      "SUDHAUS7\\Sudhaus7Formframework\\Tests\\": "Tests/"
     }
   }
 }

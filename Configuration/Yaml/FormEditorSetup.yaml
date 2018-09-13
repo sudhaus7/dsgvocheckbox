@@ -8,7 +8,7 @@ TYPO3:
           formEditor:
             dynamicRequireJsModules:
               additionalViewModelModules:
-              - 'TYPO3/CMS/YourCustomExtension/Backend/FormEditor/DsgvoViewModel'
+              - 'TYPO3/CMS/Sudhaus7Formframework/Backend/FormEditor/DsgvoViewModel'
 
             formEditorPartials:
               FormElement-Dsgvo: 'Stage/SimpleTemplate'
@@ -19,9 +19,21 @@ TYPO3:
                 label: 'formEditor.elements.Dsgvo.label'
                 group: custom
                 groupSorting: 1000
-                iconIdentifier: 't3-form-icon-your-custom-element'
+                iconIdentifier: 't3-form-icon-checkbox'
+                predefinedDefaults:
+                  properties:
+                    link: ''
+                editors:
+                  400:
+                    identifier: 'link'
+                    templateName: 'Inspector-TextEditor'
+                    label: 'formEditor.elements.Dsgvo.editor.placeholder.label'
+                    propertyPath: 'properties.fluidAdditionalAttributes.link'
+                    doNotSetIfPropertyValueIsEmpty: true
       mixins:
         formElementMixins:
           DsgvoMixin:
             __inheritances:
               10: 'TYPO3.CMS.Form.mixins.formElementMixins.FormElementMixin'
+
+
