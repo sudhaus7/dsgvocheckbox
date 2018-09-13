@@ -16,8 +16,9 @@ class SimplelinkViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
      */
     protected $escapeOutput = false;
     
-    public function initializeArguments() {
-        $this->registerArgument('link', 'string', 'link configuration',true);
+    public function initializeArguments()
+    {
+        $this->registerArgument('link', 'string', 'link configuration', true);
     }
     
     /**
@@ -30,19 +31,17 @@ class SimplelinkViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
      */
     public function render()
     {
-    
         $output = $this->renderChildren();
         $link = $this->arguments['link'];
-        preg_match('/\[.+\]/',$output,$matches);
+        preg_match('/\[.+\]/', $output, $matches);
         foreach ($matches as $match) {
-            $plain = trim($match,'[]');
+            $plain = trim($match, '[]');
             $linktext = $GLOBALS['TSFE']->cObj->typoLink($plain, [
                 'parameter'=>$link,
                 'target'=>'_blank',
             ]);
-            $output = str_replace($match,$linktext,$output);
+            $output = str_replace($match, $linktext, $output);
         }
         return $output;
     }
 }
-
