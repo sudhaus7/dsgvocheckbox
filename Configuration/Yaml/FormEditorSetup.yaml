@@ -26,7 +26,10 @@ TYPO3:
                 editors:
                   400:
                     identifier: 'link'
-                    templateName: 'Inspector-TextEditor'
+                    #templateName: 'Inspector-TextEditor'
+                    templateName: 'Inspector-Typo3WinBrowserEditor'
+                    buttonLabel: 'formEditor.elements.Form.finisher.Redirect.editor.pageUid.buttonLabel'
+                    browsableType: pages
                     label: 'formEditor.elements.Dsgvo.editor.placeholder.label'
                     propertyPath: 'properties.fluidAdditionalAttributes.link'
                     doNotSetIfPropertyValueIsEmpty: true

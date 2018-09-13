@@ -12,28 +12,35 @@ class SimplelinkViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
 {
     
     /**
+     * @var bool
+     */
+    protected $escapeOutput = false;
+    
+    public function initializeArguments() {
+        $this->registerArgument('link', 'string', 'link configuration',true);
+    }
+    
+    /**
      * Replaces [Text] with a link for $link with typolink
      *
-     * @param string $link link
      * @return string
      *
      * @throws nothing
      *
      */
-    public function render($link)
+    public function render()
     {
     
-        $renderChildrenClosure =  $this->buildRenderChildrenClosure();
-        $output = $renderChildrenClosure();
-        
-        if (!empty($link)) {
-            
-            preg_match_all('/\[.+\]/',$output,$matches);
-            
-            $GLOBALS['TSFE']->cObj->typoLink($output, [
+        $output = $this->renderChildren();
+        $link = $this->arguments['link'];
+        preg_match('/\[.+\]/',$output,$matches);
+        foreach ($matches as $match) {
+            $plain = trim($match,'[]');
+            $linktext = $GLOBALS['TSFE']->cObj->typoLink($plain, [
                 'parameter'=>$link,
                 'target'=>'_blank',
             ]);
+            $output = str_replace($match,$linktext,$output);
         }
         return $output;
     }

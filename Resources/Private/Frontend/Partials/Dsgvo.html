@@ -1,14 +1,12 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
       xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers"
-      xmlns:s7form="http://sudhaus7.de/ns/SUDHAUS7/Sudhaus7Formframework/ViewHelpers"
+      xmlns:s7form="http://typo3.org/ns/SUDHAUS7/Sudhaus7Formframework/ViewHelpers"
       xmlns="http://www.w3.org/1999/xhtml"
       lang="en"
       f:schemaLocation="https://fluidtypo3.org/schemas/fluid-master.xsd"
       data-namespace-typo3-fluid="true">
-{namespace s7form=SUDHAUS7\Sudhaus7Formframework\ViewHelpers}
 <formvh:renderRenderable renderable="{element}">
     <f:render partial="Field/Field" arguments="{element: element, doNotShowLabel: 1}" contentAs="elementContent">
-        <f:debug>{element.properties.fluidAdditionalAttributes}</f:debug>
         <div class="form-check">
             <label class="{element.properties.elementClassAttribute} form-check-label" for="{element.uniqueIdentifier}">
                 <f:form.checkbox
