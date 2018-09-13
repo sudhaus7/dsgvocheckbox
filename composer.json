@@ -30,7 +30,8 @@
     "preferred-install": {
       "*": "dist"
     },
-    "vendor-dir": ".Build/vendor"
+    "vendor-dir": ".Build/vendor",
+    "bin-dir": ".Build/bin"
   },
   "extra": {
     "branch-alias": {
