@@ -1,0 +1,27 @@
+# Configuration/Yaml/FormEditorSetup.yaml
+
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formEditor:
+            dynamicRequireJsModules:
+              additionalViewModelModules:
+              - 'TYPO3/CMS/YourCustomExtension/Backend/FormEditor/DsgvoViewModel'
+
+            formEditorPartials:
+              FormElement-Dsgvo: 'Stage/SimpleTemplate'
+
+          formElementsDefinition:
+            Dsgvo:
+              formEditor:
+                label: 'formEditor.elements.Dsgvo.label'
+                group: custom
+                groupSorting: 1000
+                iconIdentifier: 't3-form-icon-your-custom-element'
+      mixins:
+        formElementMixins:
+          DsgvoMixin:
+            __inheritances:
+              10: 'TYPO3.CMS.Form.mixins.formElementMixins.FormElementMixin'

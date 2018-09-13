@@ -1,0 +1,13 @@
+module.tx_form {
+    settings {
+        yamlConfigurations {
+            1536836662 = EXT:sudhaus7_formframework/Configuration/Yaml/BaseSetup.yaml
+            1536836663 = EXT:sudhaus7_formframework/Configuration/Yaml/FormEditorSetup.yaml
+        }
+    }
+    view {
+        partialRootPaths {
+            1536836662 = EXT:sudhaus7_formframework/Resources/Private/Backend/Partials/
+        }
+    }
+}

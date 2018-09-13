@@ -1,7 +1,7 @@
 {
   "name": "sudhaus7/formframework",
   "description": "(Sudhaus7) Form Framework Tools and Extensions",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "typo3-cms-extension",
   "license": "",
   "authors": [
@@ -33,7 +33,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "0.0.x-dev"
+      "dev-master": "0.1.x-dev"
     },
     "typo3/cms": {
       "extension-key": "sudhaus7_formframework",

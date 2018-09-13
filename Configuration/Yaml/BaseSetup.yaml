@@ -1,0 +1,29 @@
+# Configuration/Yaml/BaseSetup.yaml
+
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formEditor:
+            formEditorPartials:
+              FormElement-Dsgvo: 'Stage/SimpleTemplate'
+
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  1536834792: 'EXT:sudhaus7_formframework/Resources/Private/Frontend/Templates/'
+                partialRootPaths:
+                  1536834792: 'EXT:sudhaus7_formframework/Resources/Private/Frontend/Partials/'
+                layoutRootPaths:
+                  1536834792: 'EXT:sudhaus7_formframework/Resources/Private/Frontend/Layouts/'
+
+            Dsgvo:
+              __inheritances:
+                10: 'TYPO3.CMS.Form.mixins.formElementMixins.DsgvoMixin'
+      mixins:
+        formElementMixins:
+          DsgvoMixin:
+            __inheritances:
+              10: 'TYPO3.CMS.Form.mixins.formElementMixins.FormElementMixin'
