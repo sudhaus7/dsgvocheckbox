@@ -8,6 +8,9 @@
 
 namespace SUDHAUS7\Sudhaus7Formframework\ViewHelpers;
 
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
+
 class SimplelinkViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
 {
     
@@ -35,10 +38,12 @@ class SimplelinkViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
         
         $link = $this->arguments['link'];
         $output = $this->arguments['content'];
-        if (empty($content)) {
+        if (empty($output)) {
             $output = $this->renderChildren();
         }
+        
         preg_match('/\[.+\]/', $output, $matches);
+        
         foreach ($matches as $match) {
             $plain = trim($match, '[]');
             $linktext = $GLOBALS['TSFE']->cObj->typoLink($plain, [
