@@ -35,7 +35,6 @@ class SimplelinkViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
      */
     public function render()
     {
-        
         $link = $this->arguments['link'];
         $output = $this->arguments['content'];
         if (empty($output)) {
