@@ -25,7 +25,7 @@ TYPO3:
               properties:
                 elementClassAttribute: 'add-on'
                 containerClassAttribute: 'input checkbox dsgvo linked-label'
-                value: 1
+                value: 'Ja'
       mixins:
         formElementMixins:
           DsgvoMixin:
