@@ -7,4 +7,4 @@ Fields:
 
 Finishers:
 
-- none yet
+- Better Confirmation. A copy of the Standard Confirmation Finisher but wrapped in a Fluid Template in order to be able to better style the Element and to add the form-id as a jump target
