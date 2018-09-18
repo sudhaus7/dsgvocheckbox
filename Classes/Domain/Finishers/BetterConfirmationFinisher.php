@@ -46,6 +46,7 @@ class BetterConfirmationFinisher extends AbstractFinisher
         }
     }
     
+    
     /**
      * Executes this finisher
      *
