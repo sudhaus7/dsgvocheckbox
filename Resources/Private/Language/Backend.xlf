@@ -11,6 +11,12 @@
             <trans-unit id="formEditor.elements.Dsgvo.editor.placeholder.label" xml:space="preserve">
 				<source>Link/Page-id</source>
 			</trans-unit>
+            <trans-unit id="formEditor.elements.Form.finisher.BetterConfirmation.editor.header.label" xml:space="preserve">
+				<source>Better Confirmation</source>
+			</trans-unit>
+            <trans-unit id="formEditor.elements.Form.editor.finishers.BetterConfirmation.label" xml:space="preserve">
+				<source>Better Confirmation Finisher</source>
+			</trans-unit>
         </body>
 
     </file>

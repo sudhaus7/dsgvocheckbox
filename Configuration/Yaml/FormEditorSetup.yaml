@@ -14,6 +14,28 @@ TYPO3:
               FormElement-Dsgvo: 'Stage/SimpleTemplate'
 
           formElementsDefinition:
+            Form:
+              formEditor:
+                editors:
+                  900:
+                    selectOptions:
+                      1537262682:
+                        value: 'BetterConfirmation'
+                        label: 'formEditor.elements.Form.editor.finishers.BetterConfirmation.label'
+                propertyCollections:
+                  finishers:
+                    1537262682:
+                      identifier: 'BetterConfirmation'
+                      editors:
+                        __inheritances:
+                          10: 'TYPO3.CMS.Form.mixins.formElementMixins.BaseCollectionEditorsMixin'
+                        100:
+                          label: 'formEditor.elements.Form.editor.finishers.BetterConfirmation.label'
+                        300:
+                          identifier: 'message'
+                          templateName: 'Inspector-TextareaEditor'
+                          label: 'formEditor.elements.Form.finisher.Confirmation.editor.message.label'
+                          propertyPath: 'options.message'
             Dsgvo:
               formEditor:
                 label: 'formEditor.elements.Dsgvo.label'
@@ -33,10 +55,21 @@ TYPO3:
                     label: 'formEditor.elements.Dsgvo.editor.placeholder.label'
                     propertyPath: 'properties.fluidAdditionalAttributes.link'
                     doNotSetIfPropertyValueIsEmpty: true
+
+          finishersDefinition:
+            BetterConfirmation:
+              formEditor:
+                iconIdentifier: 't3-form-icon-finisher'
+                label: 'formEditor.elements.Form.finisher.BetterConfirmation.editor.header.label'
+                predefinedDefaults:
+                  options:
+                    message: ''
+
+
+
       mixins:
         formElementMixins:
           DsgvoMixin:
             __inheritances:
               10: 'TYPO3.CMS.Form.mixins.formElementMixins.FormElementMixin'
-
 

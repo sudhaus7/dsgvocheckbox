@@ -9,6 +9,10 @@ TYPO3:
             formEditorPartials:
               FormElement-Dsgvo: 'Stage/SimpleTemplate'
 
+          finishersDefinition:
+            BetterConfirmation:
+              implementationClassName: SUDHAUS7\Sudhaus7Formframework\Domain\Finishers\BetterConfirmationFinisher
+
           formElementsDefinition:
             Form:
               renderingOptions:
@@ -31,3 +35,4 @@ TYPO3:
           DsgvoMixin:
             __inheritances:
               10: 'TYPO3.CMS.Form.mixins.formElementMixins.FormElementMixin'
+
