@@ -48,6 +48,7 @@ class SimplelinkViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
             $linktext = $GLOBALS['TSFE']->cObj->typoLink($plain, [
                 'parameter'=>$link,
                 'target'=>'_blank',
+                'forceAbsoluteUrl'=>1,
             ]);
             $output = str_replace($match, $linktext, $output);
         }
