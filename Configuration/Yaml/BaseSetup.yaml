@@ -19,7 +19,7 @@ TYPO3:
                 templateRootPaths:
                   1536834792: 'EXT:sudhaus7_formframework/Resources/Private/Frontend/Templates/'
                 partialRootPaths:
-                  1536834792: 'EXT:sudhaus7_formframework/Resources/Private/Frontend/Partials/'
+                  5: 'EXT:sudhaus7_formframework/Resources/Private/Frontend/Partials/'
                 layoutRootPaths:
                   1536834792: 'EXT:sudhaus7_formframework/Resources/Private/Frontend/Layouts/'
 
