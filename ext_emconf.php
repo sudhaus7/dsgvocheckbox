@@ -5,7 +5,7 @@
  * Date: 13.09.18
  * Time: 12:19
  */
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF[$_EXTKEY] = [
     'title' => '(Sudhaus7) Form Framework Extensions',
     'description' => 'Provides Additional Fields, Configs and Finishers',
     'category' => 'plugin',
@@ -22,15 +22,15 @@ $EM_CONF[$_EXTKEY] = array(
     'modify_tables' => '',
     'clearCacheOnLoad' => 0,
     'lockType' => '',
-    'version' => '1.2.2',
-    'constraints' => array(
-        'depends' => array(
+    'version' => '1.2.3',
+    'constraints' => [
+        'depends' => [
             'typo3' => '7.6.0-9.5.99',
             'form' =>'7.6.0-9.5.99',
-        ),
-        'conflicts' => array(
-        ),
-        'suggests' => array(
-        ),
-    ),
-);
+        ],
+        'conflicts' => [
+        ],
+        'suggests' => [
+        ],
+    ],
+];

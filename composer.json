@@ -1,9 +1,9 @@
 {
   "name": "sudhaus7/formframework",
   "description": "(Sudhaus7) Form Framework Tools and Extensions",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "type": "typo3-cms-extension",
-  "license": "",
+  "license": "MIT",
   "authors": [
     {
       "name": "Frank Berger",
@@ -14,13 +14,13 @@
     "sudhaus7_formframework": "self.version"
   },
   "require": {
-    "php": "~7.0.0 || ~7.1.0 || ~7.2.0",
-    "typo3/cms-core": ">=7.6,<10",
-    "typo3/cms-form": ">=7.6,<10"
+    "php": "~7.0.0 | ~7.1.0 | ~7.2.0",
+    "typo3/cms-core": "~7.6.23 | ~8.7.10 | ~9.5.9",
+    "typo3/cms-form": "~7.6.23 | ~8.7.10 | ~9.5.9"
   },
   "require-dev": {
     "phpunit/phpunit": "^6.3.0",
-    "typo3/cms-fluid-styled-content": "^7.6.23 || ^8.7.10 || ^9.5.9",
+    "typo3/cms-fluid-styled-content": "^7.6.23 | ^8.7.10 | ^9.5.9",
     "helhum/typo3-composer-setup": "^0.5.1",
     "helmich/typo3-typoscript-lint": "^1.4.4",
     "nimut/testing-framework": "^3.0",
