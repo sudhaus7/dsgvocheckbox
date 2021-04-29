@@ -14,7 +14,7 @@
     "sudhaus7_formframework": "self.version"
   },
   "require": {
-    "php": "~7.0.0 | ~7.1.0 | ~7.2.0",
+    "php": ">=7.0",
     "typo3/cms-core": "~7.6.23 | ~8.7.10 | ~9.5.9",
     "typo3/cms-form": "~7.6.23 | ~8.7.10 | ~9.5.9"
   },
