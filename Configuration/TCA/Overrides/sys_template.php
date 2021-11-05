@@ -11,4 +11,4 @@
         'Configuration/TypoScript',
         'Sudhaus7 Form Framework Extras'
     );
-})('formframework');
+})('sudhaus7_formframework');
