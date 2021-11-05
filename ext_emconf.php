@@ -5,7 +5,7 @@
  * Date: 13.09.18
  * Time: 12:19
  */
-$EM_CONF[$_EXTKEY] = [
+$EM_CONF['formframework'] = [
     'title' => '(Sudhaus7) Form Framework Extensions',
     'description' => 'Provides Additional Fields, Configs and Finishers',
     'category' => 'plugin',
